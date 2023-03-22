@@ -1,0 +1,75 @@
+material:
+need a set of all term in all doc done
+all terms fequency of each document 
+
+pesudo code:
+dic for doc frequency
+list(list(tf))
+for each term in all_terms
+	for doc in docs:
+		if term in doc.content
+			if term in dic.key:
+				dic[term]++
+			else:
+				dic[term] = 1
+		freq = 0
+		listFreqOfTerm
+		for word in doc.content:
+			if word == term:
+				freqOfTerm in this doc++
+		listFreqOfTerm.add(freq)
+	list.extends(listFreqOfTerm.add)
+
+tính được idf của từng term
+dicForIDF ={}
+for key in dick.keys:
+	dicForIDF[key] = log(len(docs)/dic[key])
+cal weight of each term in each doc:
+cal the weight of query too
+weight_query(the query vector) = [0]*len(setAllWords)
+list(list(weight))
+	i = 0
+	for list_i in list(list(tf)):
+		list_temp = []
+		term_i = setAllTerms[i]
+		for ele in list_i:
+			list_temp.add(ele*dicIDF[term_i])
+		list(list(weight)).extends(list_temp)
+		i+=1
+	j = 0
+	for term in setAllTerms:
+		for word in query_word_set:
+			if term == word
+				weight_query[j] = word.freq * dicIDF[term]
+		j+=1
+subtask:
+set the query words and count the freq done
+cal the sim of query with each docs vector list(list(weight))
+do matrix transpose:
+matrix = []
+
+
+for i in range(len(docs)):
+	temp = []
+	for list_i in list(list(weight)):
+		temp.add(list_i[i])
+	matrix.extends(temp)
+	
+	
+for doc_vec in matrix:
+	the (formular)
+				
+		
+
+			
+		
+				
+			
+number of doc
+doc frequency (just if the term in the doc)
+
+step 2:
+cal the weight of the query like above
+the vector should be dimension of len(set(terms))
+cal the cosine between query and all doc and ranked it and then show 
+the first 10 result or set k result
